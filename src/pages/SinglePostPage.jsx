@@ -94,7 +94,7 @@ class SinglePostPage extends Component {
                             type="text"
                             placeholder="title"
                             autoFocus
-                            defaultValue={this.props.post.title}
+                            defaultValue={this.props.post?this.props.post.title:"Post removed"}
                             />
                         </Form.Group>
                         <Form.Group className="mb-3">
@@ -102,7 +102,7 @@ class SinglePostPage extends Component {
                         <Form.Control 
                         // onChange={()=>{console.log("Change")}
                         // async (event) => { await handleChange();}
-                        defaultValue={this.props.post.description}
+                        defaultValue={this.props.post?this.props.post.description:""}
                         id="NewPostData" as="textarea" rows={5} />
                         </Form.Group>
                         <Form.Group className="mb-3" >
@@ -112,7 +112,7 @@ class SinglePostPage extends Component {
                             type="text"
                             placeholder="link"
                             autoFocus
-                            defaultValue={this.props.post.link}
+                            defaultValue={this.props.post?this.props.post.link:""}
                         />
                         </Form.Group>
                         <Form.Group className="mb-3" >
@@ -122,7 +122,7 @@ class SinglePostPage extends Component {
                             type="text"
                             placeholder="author"
                             autoFocus
-                            defaultValue={this.props.post.author}
+                            defaultValue={this.props.post?this.props.post.author:""}
                         />
                         </Form.Group>
                         <Form.Group className="mb-3" >
@@ -132,7 +132,7 @@ class SinglePostPage extends Component {
                             type="text"
                             placeholder="category"
                             autoFocus
-                            defaultValue={this.props.post.category}
+                            defaultValue={this.props.post?this.props.post.category:""}
                         />
                         </Form.Group>
                     </Form>
